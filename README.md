@@ -21,6 +21,8 @@ A multi-purpose dev toolkit by Deluxateer. It is designed to streamline developm
 
 ## How To Use:
 
+First run `npm install`.
+
 ### `npm run build`
 
 Builds the destination folder with static files __FOR DEVELOPMENT__. It runs tasks for `clean`, `views`, `styles`, `js`, `minimgs`, `favicon` and `watch`.
@@ -81,29 +83,3 @@ The views, styles, and functionality are decoupled as much as possible, where th
 ## Notes
 
 Sass Architecture and Boilerplate based from Hugo Giraudel's [Style Guide](https://sass-guidelin.es/) and [Code](https://github.com/HugoGiraudel/sass-boilerplate).
-
-## Goals
-
-I would like to segregate these features between Webpack and Gulp, since the purpose of Webpack is to be a bundler and Gulp to be a task runner.
-
-### Webpack:
-* html template engine (pug)
-* compile scss files
-* postcss (autoprefix, polyfills, linting, use future css tech)
-* concatenating js files
-* transpile js files with babel
-* include sourcemaps for scss and js files too
-* minify all static files (html, css, js)
-* minify all images
-
-### Gulp:
-* linting for js (eslint)
-* unit testing
-* spin up browsersync
-* watch for changes for files
-
-## Issues
-* find ways to additional style-guide rules into scss-linter
-* there isn't a way to cleanly write the output of pug-lint to a file
-* simplify the carousel component's architecture
-  * too much of the carousel's inner-workings markup has to be exposed when calling the Pug mixin
