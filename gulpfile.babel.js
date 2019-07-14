@@ -25,7 +25,7 @@ const buildGlob = (...args) => slash(path.resolve(...args));
 // CONFIGURATION
 const production = process.env.NODE_ENV === 'production';
 const source = buildGlob(__dirname, 'src');
-const destination = buildGlob(__dirname, 'dist');
+const destination = buildGlob(__dirname, 'docs');
 const reportsPath = buildGlob(__dirname, 'reports');
 // DESTINATION PATHS
 const destCss = buildGlob(destination, 'css');
@@ -153,7 +153,7 @@ const js = series(lintJs, processJs);
 
 const watchTask = () => {
   browserSync.init({
-    server: 'dist',
+    server: 'docs',
     open: 'external',
     port: 9000,
   });

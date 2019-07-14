@@ -2,7 +2,7 @@
 node_modules/
 
 # static generated assets
-# dist/
+# docs/
 
 # debug
 reports/
